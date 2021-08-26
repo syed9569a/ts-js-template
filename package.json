@@ -1,0 +1,26 @@
+{
+    "name": "@nudg/cicd-worker",
+    "version": "0.0.1",
+    "description": "A NodeJS Kafka consumer for executing CICD pipelines.",
+    "author": "NUDG",
+    "license": "UNLICENSED",
+    "bugs": "https://lovedby-nudg.atlassian.net/jira/",
+    "repository": "https://bitbucket.org/nudg/cicd-worker.git",
+    "homepage": "https://bitbucket.org/nudg/cicd-worker",
+    "private": true,
+    "keywords": [
+        "nudg",
+        "cicd",
+        "worker"
+    ],
+    "main": "./src/server.js",
+    "scripts": {
+        "dev": "nodemon",
+        "start": "yarn build && node ./build/server.js",
+        "build": "rm -rf build && tsc -p .",
+        "lint": "eslint . --fix",
+        "docs": "rm -rf docs && typedoc --out docs --plugin typedoc-plugin-markdown --theme bitbucket src"
+    },
+    "dependencies": {
+    }
+}
